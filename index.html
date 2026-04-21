@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kissan Mitra - Maharashtra Farming Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🌾 Kissan Mitra</h1>
+                <p>Farming Help for You - Maharashtra</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#input" onclick="showSection('input')">Choose Crop</a></li>
+                <li><a href="#flowchart" onclick="showSection('flowchart')">Steps to Follow</a></li>
+                <li><a href="#fertilizers" onclick="showSection('fertilizers')">Fertilizer Info</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="welcome-box">
+                <h2>Welcome to Kissan Mitra</h2>
+                <p>We help you choose the right crop for your farm. Tell us about your land and we will suggest which crop to grow. Learn easy steps to get better harvest.</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                    <h3>📍 For Maharashtra</h3>
+                    <p>Advice for your weather and soil in Maharashtra</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎯 Right Crop Choice</h3>
+                        <p>Get the best crop for your land details</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📚 Easy Learning</h3>
+                        <p>Learn simple steps and what fertilizer to use</p>
+                    </div>
+                </div>
+
+                <button class="cta-button" onclick="showSection('input')">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Input Form Section -->
+        <section id="input" class="section">
+            <h2>Tell Us About Your Farm</h2>
+            <form id="farmForm" class="form-container">
+                <div class="form-group">
+                    <label for="area">How much land do you have? (in acres)</label>
+                    <input type="number" id="area" min="0.5" step="0.5" required placeholder="Example: 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="soil">What color is your soil?</label>
+                    <select id="soil" required>
+                        <option value="">-- Pick One --</option>
+                        <option value="black">Black soil - good for cotton and sugarcane</option>
+                        <option value="red">Red soil - good for pulses and millet</option>
+                        <option value="laterite">Laterite soil - good for tubers</option>
+                        <option value="alluvial">Alluvial soil - good for many crops</option>
+                        <option value="clay">Clay soil - good for rice and wheat</option>
+                        <option value="sandy">Sandy soil - good for peanuts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="water">Do you have water for irrigation?</label>
+                    <select id="water" required>
+                        <option value="">-- Pick One --</option>
+                        <option value="high">Yes, plenty of water all year</option>
+                        <option value="medium">Some water for 6-8 months</option>
+                        <option value="low">Only rain water</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="season">Which season is it now?</label>
+                    <select id="season" required>
+                        <option value="">-- Pick One --</option>
+                        <option value="kharif">Kharif - Rain season (June-October)</option>
+                        <option value="rabi">Rabi - Winter season (October-March)</option>
+                        <option value="summer">Summer season (March-May)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rainfall">How much rain falls in your area per year? (in mm)</label>
+                    <input type="number" id="rainfall" min="0" step="50" required placeholder="Example: 700">
+                </div>
+
+                <div class="form-group">
+                    <label for="temp">What is the hottest and coldest temperature? (°C)</label>
+                    <input type="text" id="temp" required placeholder="Example: 18-35">
+                </div>
+
+                <div class="form-group">
+                    <label for="soilPH">What is your soil pH? (Check with your agriculture office)</label>
+                    <input type="number" id="soilPH" min="4" max="9" step="0.1" required placeholder="Example: 6.5">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastCrop">What crop did you grow last time? (if any)</label>
+                    <input type="text" id="lastCrop" placeholder="Example: Rice">
+                </div>
+
+                <button type="button" class="submit-button" onclick="predictCrop()">Show Me Best Crops</button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="results" class="results-section hidden">
+                <h2>Best Crops for Your Farm</h2>
+                <div id="cropRecommendations" class="crops-container"></div>
+            </div>
+        </section>
+
+        <!-- Flowchart Section -->
+        <section id="flowchart" class="section">
+            <h2>Steps to Get Better Harvest</h2>
+            <div class="flowchart-container">
+                <div class="flowchart-box start">
+                    <div>Start Here</div>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Check Your Farm</div>
+                    <small>Land size, soil, water</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Check Weather</div>
+                    <small>Rain, temperature, season</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Test Your Soil</div>
+                    <small>pH, good nutrients</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Pick Best Crop</div>
+                    <small>Use Kissan Mitra app</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Plan Your Work</div>
+                    <small>When to plant, water, harvest</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Give Fertilizer & Water</div>
+                    <small>Feed, water, stop pests</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box">
+                    <div>Watch & Harvest</div>
+                    <small>Check growth, pick at right time</small>
+                </div>
+                <div class="arrow">↓</div>
+                
+                <div class="flowchart-box success">
+                    <div>Great Harvest! 🎉</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fertilizers & Inputs Section -->
+        <section id="fertilizers" class="section">
+            <h2>What to Put in Your Soil</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🌱 Nitrogen (Urea)</h3>
+                    <p><strong>What it does:</strong> Makes leaves green and big</p>
+                    <p><strong>Types:</strong> Urea powder, manure</p>
+                    <p><strong>How much:</strong> 50-150 kg per acre</p>
+                    <p><strong>When:</strong> When crop is growing</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🌾 Phosphorus (DAP)</h3>
+                    <p><strong>What it does:</strong> Makes roots strong and flowers bloom</p>
+                    <p><strong>Types:</strong> DAP, SSP powder</p>
+                    <p><strong>How much:</strong> 20-60 kg per acre</p>
+                    <p><strong>When:</strong> Before planting</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🪨 Potassium (Muriate)</h3>
+                    <p><strong>What it does:</strong> Makes plant strong and stops diseases</p>
+                    <p><strong>Types:</strong> Muriate of Potash (MOP) powder</p>
+                    <p><strong>How much:</strong> 30-60 kg per acre</p>
+                    <p><strong>When:</strong> When crop is growing big</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>♻️ Natural Fertilizer</h3>
+                    <p><strong>What it does:</strong> Makes soil healthy and long-lasting</p>
+                    <p><strong>Types:</strong> Cow dung, compost, neem cake</p>
+                    <p><strong>How much:</strong> 5-10 tons per acre each year</p>
+                    <p><strong>When:</strong> Before planting season</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🐞 Stop Pests & Diseases</h3>
+                    <p><strong>What it does:</strong> Keeps bad insects and diseases away</p>
+                    <p><strong>Types:</strong> Neem spray, chemicals for pests</p>
+                    <p><strong>How often:</strong> Every 2-4 weeks as needed</p>
+                    <p><strong>Important:</strong> Use safely - wear gloves</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>💧 Water Your Crop</h3>
+                    <p><strong>What it does:</strong> Gives water for good growth</p>
+                    <p><strong>How often:</strong> Every 7-15 days</p>
+                    <p><strong>How much:</strong> 4-6 cm water each time</p>
+                    <p><strong>Best time:</strong> Early morning is best</p>
+                </div>
+            </div>
+
+            <div class="fertilizer-table">
+                <h3>What Fertilizer for Each Crop</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Crop</th>
+                            <th>Urea (kg)</th>
+                            <th>DAP (kg)</th>
+                            <th>MOP (kg)</th>
+                            <th>Season</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rice</td>
+                            <td>120-150</td>
+                            <td>40-60</td>
+                            <td>40-60</td>
+                            <td>Kharif</td>
+                        </tr>
+                        <tr>
+                            <td>Wheat</td>
+                            <td>100-120</td>
+                            <td>50-60</td>
+                            <td>40-50</td>
+                            <td>Rabi</td>
+                        </tr>
+                        <tr>
+                            <td>Sugarcane</td>
+                            <td>120-150</td>
+                            <td>60-80</td>
+                            <td>60-80</td>
+                            <td>Kharif</td>
+                        </tr>
+                        <tr>
+                            <td>Cotton</td>
+                            <td>120-150</td>
+                            <td>50-60</td>
+                            <td>40-50</td>
+                            <td>Kharif</td>
+                        </tr>
+                        <tr>
+                            <td>Jowar (Sorghum)</td>
+                            <td>60-80</td>
+                            <td>30-40</td>
+                            <td>30-40</td>
+                            <td>Kharif</td>
+                        </tr>
+                        <tr>
+                            <td>Pulses</td>
+                            <td>20-40</td>
+                            <td>40-50</td>
+                            <td>30-40</td>
+                            <td>Rabi</td>
+                        </tr>
+                        <tr>
+                            <td>Onion</td>
+                            <td>80-100</td>
+                            <td>50-60</td>
+                            <td>40-50</td>
+                            <td>Rabi</td>
+                        </tr>
+                        <tr>
+                            <td>Tomato</td>
+                            <td>100-150</td>
+                            <td>60-80</td>
+                            <td>80-100</td>
+                            <td>Summer/Rabi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Get in Touch</h2>
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h3>📞 Call Us</h3>
+                    <p><strong>Phone:</strong></p>
+                    <p><a href="tel:9730726966" class="contact-link">9730726966</a></p>
+                    <p class="contact-info">Call us for farming advice and questions</p>
+                </div>
+
+                <div class="contact-box">
+                    <h3>✉️ Email Us</h3>
+                    <p><strong>Email:</strong></p>
+                    <p><a href="mailto:nirjar.patil25@pccoepune.org" class="contact-link">nirjar.patil25@pccoepune.org</a></p>
+                    <p class="contact-info">Send us your questions and feedback</p>
+                </div>
+            </div>
+
+            <div class="message-box">
+                <h3>How We Can Help</h3>
+                <ul>
+                    <li>✓ Advice on which crop to grow</li>
+                    <li>✓ Help with farming problems</li>
+                    <li>✓ Information about fertilizers</li>
+                    <li>✓ Tips for better harvest</li>
+                    <li>✓ Questions about irrigation</li>
+                    <li>✓ Pest and disease solutions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Kissan Mitra - Help for Maharashtra Farmers | Farm Well, Earn More</p>
+            <p>Need help? Call your local agriculture office</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

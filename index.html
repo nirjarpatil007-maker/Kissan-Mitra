@@ -787,8 +787,6 @@
                 <div class="hero-stats">
                     <div class="hero-stat-card"><h3>25+</h3><span data-lang-en="Crops Analyzed" data-lang-mr="पिकांचे विश्लेषण">Crops Analyzed</span></div>
                     <div class="hero-stat-card"><h3>36</h3><span data-lang-en="Districts Covered" data-lang-mr="जिल्हे समाविष्ट">Districts Covered</span></div>
-                    <div class="hero-stat-card"><h3>95%</h3><span data-lang-en="Accuracy Rate" data-lang-mr="अचूकता दर">Accuracy Rate</span></div>
-                    <div class="hero-stat-card"><h3>10K+</h3><span data-lang-en="Farmers Helped" data-lang-mr="शेतकरी लाभार्थी">Farmers Helped</span></div>
                 </div>
             </div>
         </div>
@@ -830,9 +828,9 @@
     <section class="page-section" id="page-crop-prediction">
         <div class="section-container">
             <h2 class="section-title">🌾 <span data-lang-en="Crop Recommendation & Prediction" data-lang-mr="पीक शिफारस आणि भविष्यवाणी">Crop Recommendation & Prediction</span></h2>
-            <p class="section-subtitle" data-lang-en="Module by Atharva Jankar – Intelligent crop suggestions based on your farm data."
-            data-lang-mr="अथर्व जानकर द्वारा मॉड्यूल – आपल्या शेती डेटावर आधारित बुद्धिमान पीक सूचना.">
-            Module by Atharva Jankar – Intelligent crop suggestions based on your farm data.</p>
+            <p class="section-subtitle" data-lang-en="Intelligent crop suggestions based on your farm data."
+            data-lang-mr="आपल्या शेती डेटावर आधारित बुद्धिमान पीक सूचना.">
+            Intelligent crop suggestions based on your farm data.</p>
             <div class="card" style="max-width:800px;margin:0 auto;">
                 <h3 data-lang-en="Farm Details Form" data-lang-mr="शेती माहिती फॉर्म">Farm Details Form</h3>
                 <div class="form-row">
@@ -910,8 +908,8 @@
     <section class="page-section" id="page-irrigation">
         <div class="section-container">
             <h2 class="section-title">💧 <span data-lang-en="Irrigation & Water Management" data-lang-mr="सिंचन आणि पाणी व्यवस्थापन">Irrigation & Water Management</span></h2>
-            <p class="section-subtitle" data-lang-en="Module by Parth Rananaware – Efficient water usage for sustainable farming."
-            data-lang-mr="पार्थ रणनवरे द्वारा मॉड्यूल – शाश्वत शेतीसाठी कार्यक्षम पाणी वापर.">Module by Parth Rananaware – Efficient water usage for sustainable farming.</p>
+            <p class="section-subtitle" data-lang-en="Efficient water usage for sustainable farming."
+            data-lang-mr="शाश्वत शेतीसाठी कार्यक्षम पाणी वापर.">Efficient water usage for sustainable farming.</p>
             <div class="card-grid">
                 <div class="card"><div class="card-icon"><i class="fas fa-tint"></i></div><h3 data-lang-en="Drip Irrigation" data-lang-mr="ठिबक सिंचन">Drip Irrigation</h3><p data-lang-en="Save up to 50% water. Ideal for sugarcane, cotton, grapes." data-lang-mr="50% पर्यंत पाणी वाचवा. ऊस, कापूस, द्राक्षांसाठी आदर्श.">Save up to 50% water. Ideal for sugarcane, cotton, grapes.</p>
                     <button class="btn btn-green" onclick="navigateTo('drip-irrigation-detail')">📖 Full Guide</button></div>
@@ -927,7 +925,13 @@
                     <button class="btn btn-gold" onclick="calcWater()"><span data-lang-en="Calculate" data-lang-mr="गणना करा">Calculate</span></button>
                     <p id="waterResult" style="margin-top:0.8rem;font-weight:600;color:var(--green-dark);"></p></div>
                 <div class="card"><h3 data-lang-en="Smart Watering Schedule" data-lang-mr="स्मार्ट पाणी वेळापत्रक">Smart Watering Schedule</h3>
-                    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;"><tr style="background:#e8f5e9;"><th style="padding:8px;">Crop</th><th style="padding:8px;">Interval</th><th style="padding:8px;">Method</th></tr><tr><td style="padding:8px;">Sugarcane</td><td style="padding:8px;">5-7 days</td><td style="padding:8px;">Drip</td></tr><tr><td style="padding:8px;">Cotton</td><td style="padding:8px;">7-10 days</td><td style="padding:8px;">Sprinkler</td></tr><tr><td style="padding:8px;">Wheat</td><td style="padding:8px;">10-15 days</td><td style="padding:8px;">Sprinkler</td></tr><tr><td style="padding:8px;">Rice</td><td style="padding:8px;">3-5 days</td><td style="padding:8px;">Flood</td></tr><tr><td style="padding:8px;">Onion</td><td style="padding:8px;">5-8 days</td><td style="padding:8px;">Drip</td></tr></table></div>
+                    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;"><tr style="background:#e8f5e9;"><th style="padding:8px;">Crop</th><th style="padding:8px;">Interval</th><th style="padding:8px;">Method</th></tr>
+                    <tr><td style="padding:8px;">Sugarcane</td><td style="padding:8px;">5-7 days</td><td style="padding:8px;">Drip</td></tr>
+                    <tr><td style="padding:8px;">Cotton</td><td style="padding:8px;">7-10 days</td><td style="padding:8px;">Sprinkler</td></tr>
+                    <tr><td style="padding:8px;">Wheat</td><td style="padding:8px;">10-15 days</td><td style="padding:8px;">Sprinkler</td></tr>
+                    <tr><td style="padding:8px;">Rice</td><td style="padding:8px;">3-5 days</td><td style="padding:8px;">Flood</td></tr>
+                    <tr><td style="padding:8px;">Onion</td><td style="padding:8px;">5-8 days</td><td style="padding:8px;">Drip</td></tr>
+                    </table></div>
             </div>
         </div>
     </section>
@@ -936,8 +940,8 @@
     <section class="page-section" id="page-fertilizer">
         <div class="section-container">
             <h2 class="section-title">🧪 <span data-lang-en="Fertilizer, Soil & Disease Management" data-lang-mr="खत, माती आणि रोग व्यवस्थापन">Fertilizer, Soil & Disease Management</span></h2>
-            <p class="section-subtitle" data-lang-en="Module by Omkar Panchwagh – Optimize soil health and protect your crops."
-            data-lang-mr="ओंकार पंचवाघ द्वारा मॉड्यूल – मातीचे आरोग्य सुधारा आणि पिकांचे संरक्षण करा.">Module by Omkar Panchwagh – Optimize soil health and protect your crops.</p>
+            <p class="section-subtitle" data-lang-en="Optimize soil health and protect your crops."
+            data-lang-mr="मातीचे आरोग्य सुधारा आणि पिकांचे संरक्षण करा.">Optimize soil health and protect your crops.</p>
             <div class="card-grid">
                 <div class="card"><h3 data-lang-en="NPK Fertilizer Guide" data-lang-mr="NPK खत मार्गदर्शक">NPK Fertilizer Guide</h3><p><strong>N:</strong> Leaf growth | <strong>P:</strong> Root development | <strong>K:</strong> Disease resistance</p>
                     <button class="btn btn-outline" onclick="navigateTo('npk-guide-detail')">🧪 NPK Details</button></div>
@@ -955,7 +959,7 @@
     <section class="page-section" id="page-market">
         <div class="section-container">
             <h2 class="section-title">📊 <span data-lang-en="Market, Finance & Government Schemes" data-lang-mr="बाजार, वित्त आणि सरकारी योजना">Market, Finance & Government Schemes</span></h2>
-            <p class="section-subtitle" data-lang-en="Module by Nirjar Patil – Make informed financial decisions." data-lang-mr="निर्जर पाटील द्वारा मॉड्यूल – माहितीपूर्ण आर्थिक निर्णय घ्या.">Module by Nirjar Patil – Make informed financial decisions.</p>
+            <p class="section-subtitle" data-lang-en="Make informed financial decisions." data-lang-mr="माहितीपूर्ण आर्थिक निर्णय घ्या.">Make informed financial decisions.</p>
             <div class="card" style="margin-bottom:2rem;"><h3>📈 Market Price Dashboard</h3><div class="chart-container" style="max-width:700px;"><canvas id="marketChart"></canvas></div></div>
             <div class="card-grid">
                 <div class="card"><h3 data-lang-en="Profit Estimation" data-lang-mr="नफा अंदाज">Profit Estimation</h3>
@@ -971,11 +975,10 @@
         </div>
     </section>
 
-    <!-- ==================== DETAILED SUB-PAGES ==================== -->
+    <!-- ==================== DETAILED SUB-PAGES (all module by lines removed) ==================== -->
 
-    <!-- Drip Irrigation Detail -->
     <section class="page-section" id="page-drip-irrigation-detail">
-        <div class="detail-header"><span class="icon-large">💧</span><h1 data-lang-en="Drip Irrigation – Complete Guide" data-lang-mr="ठिबक सिंचन – संपूर्ण मार्गदर्शक">Drip Irrigation – Complete Guide</h1><p data-lang-en="Module by Parth Rananaware" data-lang-mr="पार्थ रणनवरे द्वारा मॉड्यूल">Module by Parth Rananaware</p></div>
+        <div class="detail-header"><span class="icon-large">💧</span><h1 data-lang-en="Drip Irrigation – Complete Guide" data-lang-mr="ठिबक सिंचन – संपूर्ण मार्गदर्शक">Drip Irrigation – Complete Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('irrigation')">← <span data-lang-en="Back to Irrigation" data-lang-mr="सिंचनकडे परत">Back to Irrigation</span></button>
             <div class="card" style="margin-bottom:1.5rem;"><h2>🌱 What is Drip Irrigation?</h2><p data-lang-en="Drip irrigation delivers water directly to plant roots through a network of pipes, tubes, and emitters. This method reduces water evaporation and ensures precise water delivery." data-lang-mr="ठिबक सिंचन पाईप, नळ्या आणि एमिटरच्या जाळ्याद्वारे थेट झाडाच्या मुळांपर्यंत पाणी पोहोचवते. ही पद्धत पाण्याचे बाष्पीभवन कमी करते आणि अचूक पाणी वितरण सुनिश्चित करते.">Drip irrigation delivers water directly to plant roots through a network of pipes, tubes, and emitters.</p></div>
@@ -985,9 +988,8 @@
         </div>
     </section>
 
-    <!-- Sprinkler Irrigation Detail -->
     <section class="page-section" id="page-sprinkler-irrigation-detail">
-        <div class="detail-header"><span class="icon-large">☁️</span><h1 data-lang-en="Sprinkler Irrigation – Complete Guide" data-lang-mr="तुषार सिंचन – संपूर्ण मार्गदर्शक">Sprinkler Irrigation – Complete Guide</h1><p data-lang-en="Module by Parth Rananaware" data-lang-mr="पार्थ रणनवरे द्वारा मॉड्यूल">Module by Parth Rananaware</p></div>
+        <div class="detail-header"><span class="icon-large">☁️</span><h1 data-lang-en="Sprinkler Irrigation – Complete Guide" data-lang-mr="तुषार सिंचन – संपूर्ण मार्गदर्शक">Sprinkler Irrigation – Complete Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('irrigation')">← <span data-lang-en="Back to Irrigation" data-lang-mr="सिंचनकडे परत">Back to Irrigation</span></button>
             <div class="card" style="margin-bottom:1.5rem;"><h2>🌧️ What is Sprinkler Irrigation?</h2><p data-lang-en="Sprinkler systems spray water into the air like natural rainfall. Water is pumped through pipes and released through rotating sprinkler heads, covering large areas uniformly." data-lang-mr="तुषार सिंचन प्रणाली नैसर्गिक पावसाप्रमाणे हवेत पाणी फवारते. पंपाद्वारे पाईपमधून पाणी फिरत्या स्प्रिंकलर हेडद्वारे सोडले जाते.">Sprinkler systems spray water into the air like natural rainfall, covering large areas uniformly.</p></div>
@@ -997,9 +999,8 @@
         </div>
     </section>
 
-    <!-- Canal Irrigation Detail -->
     <section class="page-section" id="page-canal-irrigation-detail">
-        <div class="detail-header"><span class="icon-large">🏞️</span><h1 data-lang-en="Canal Irrigation – Complete Guide" data-lang-mr="कालवा सिंचन – संपूर्ण मार्गदर्शक">Canal Irrigation – Complete Guide</h1><p data-lang-en="Module by Parth Rananaware" data-lang-mr="पार्थ रणनवरे द्वारा मॉड्यूल">Module by Parth Rananaware</p></div>
+        <div class="detail-header"><span class="icon-large">🏞️</span><h1 data-lang-en="Canal Irrigation – Complete Guide" data-lang-mr="कालवा सिंचन – संपूर्ण मार्गदर्शक">Canal Irrigation – Complete Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('irrigation')">← <span data-lang-en="Back to Irrigation" data-lang-mr="सिंचनकडे परत">Back to Irrigation</span></button>
             <div class="card" style="margin-bottom:1.5rem;"><h2>🚜 What is Canal Irrigation?</h2><p data-lang-en="Canal irrigation uses a network of canals to divert water from rivers, dams, or reservoirs to agricultural fields. It is the most traditional and widespread method in Maharashtra." data-lang-mr="कालवा सिंचन नद्या, धरणे किंवा जलाशयांमधून शेतजमिनीपर्यंत पाणी नेण्यासाठी कालव्यांचे जाळे वापरते. महाराष्ट्रातील ही सर्वात पारंपरिक आणि व्यापक पद्धत आहे.">Canal irrigation uses a network of canals to divert water from rivers, dams, or reservoirs to fields.</p></div>
@@ -1007,9 +1008,8 @@
         </div>
     </section>
 
-    <!-- Rainwater Harvesting Detail -->
     <section class="page-section" id="page-rainwater-harvesting-detail">
-        <div class="detail-header"><span class="icon-large">🌧️</span><h1 data-lang-en="Rainwater Harvesting – Complete Guide" data-lang-mr="पावसाचे पाणी साठवण – संपूर्ण मार्गदर्शक">Rainwater Harvesting – Complete Guide</h1><p data-lang-en="Module by Parth Rananaware" data-lang-mr="पार्थ रणनवरे द्वारा मॉड्यूल">Module by Parth Rananaware</p></div>
+        <div class="detail-header"><span class="icon-large">🌧️</span><h1 data-lang-en="Rainwater Harvesting – Complete Guide" data-lang-mr="पावसाचे पाणी साठवण – संपूर्ण मार्गदर्शक">Rainwater Harvesting – Complete Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('irrigation')">← <span data-lang-en="Back to Irrigation" data-lang-mr="सिंचनकडे परत">Back to Irrigation</span></button>
             <div class="card" style="margin-bottom:1.5rem;"><h2>💦 Why Rainwater Harvesting?</h2><p data-lang-en="Maharashtra faces frequent droughts, especially in Marathwada and Vidarbha regions. Rainwater harvesting captures monsoon runoff for use during dry months." data-lang-mr="महाराष्ट्राला विशेषतः मराठवाडा आणि विदर्भात वारंवार दुष्काळाला सामोरे जावे लागते. पावसाचे पाणी साठवण कोरड्या महिन्यांसाठी पावसाळी प्रवाह साठवते.">Maharashtra faces frequent droughts. Rainwater harvesting captures monsoon runoff for dry months.</p></div>
@@ -1017,7 +1017,6 @@
         </div>
     </section>
 
-    <!-- Soil Analysis Detail -->
     <section class="page-section" id="page-soil-analysis">
         <div class="detail-header"><span class="icon-large">🔬</span><h1 data-lang-en="Soil Analysis Guide" data-lang-mr="माती विश्लेषण मार्गदर्शक">Soil Analysis Guide</h1></div>
         <div class="section-container">
@@ -1031,7 +1030,6 @@
         </div>
     </section>
 
-    <!-- Crop Rotation Detail -->
     <section class="page-section" id="page-crop-rotation">
         <div class="detail-header"><span class="icon-large">🔄</span><h1 data-lang-en="Crop Rotation Guide" data-lang-mr="पीक फेरपालट मार्गदर्शक">Crop Rotation Guide</h1></div>
         <div class="section-container">
@@ -1046,7 +1044,6 @@
         </div>
     </section>
 
-    <!-- Crop Encyclopedia Detail -->
     <section class="page-section" id="page-crop-encyclopedia">
         <div class="detail-header"><span class="icon-large">📚</span><h1 data-lang-en="Crop Encyclopedia" data-lang-mr="पीक विश्वकोश">Crop Encyclopedia</h1></div>
         <div class="section-container">
@@ -1055,9 +1052,8 @@
         </div>
     </section>
 
-    <!-- NPK Guide Detail -->
     <section class="page-section" id="page-npk-guide-detail">
-        <div class="detail-header"><span class="icon-large">🧪</span><h1 data-lang-en="NPK Fertilizer Guide" data-lang-mr="NPK खत मार्गदर्शक">NPK Fertilizer Guide</h1><p data-lang-en="Module by Omkar Panchwagh" data-lang-mr="ओंकार पंचवाघ द्वारा मॉड्यूल">Module by Omkar Panchwagh</p></div>
+        <div class="detail-header"><span class="icon-large">🧪</span><h1 data-lang-en="NPK Fertilizer Guide" data-lang-mr="NPK खत मार्गदर्शक">NPK Fertilizer Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('fertilizer')">← Back</button>
             <div class="card-grid">
@@ -1069,9 +1065,8 @@
         </div>
     </section>
 
-    <!-- Organic Farming Detail -->
     <section class="page-section" id="page-organic-farming-detail">
-        <div class="detail-header"><span class="icon-large">🌿</span><h1 data-lang-en="Organic Farming Guide" data-lang-mr="सेंद्रिय शेती मार्गदर्शक">Organic Farming Guide</h1><p data-lang-en="Module by Omkar Panchwagh" data-lang-mr="ओंकार पंचवाघ द्वारा मॉड्यूल">Module by Omkar Panchwagh</p></div>
+        <div class="detail-header"><span class="icon-large">🌿</span><h1 data-lang-en="Organic Farming Guide" data-lang-mr="सेंद्रिय शेती मार्गदर्शक">Organic Farming Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('fertilizer')">← Back</button>
             <div class="highlight-box"><h3>🌱 Organic Inputs</h3><ul style="padding-left:1.5rem;"><li><strong>Vermicompost (गांडूळ खत):</strong> 2 tons/acre – Rich in nutrients</li><li><strong>Green Manure:</strong> Dhaincha, Sunhemp – Plow into soil before sowing</li><li><strong>Neem Cake:</strong> Natural pest repellent + fertilizer</li><li><strong>Jeevamrut:</strong> Cow dung + cow urine + jaggery + gram flour ferment</li><li><strong>Panchagavya:</strong> 5 cow products blend for plant health</li></ul></div>
@@ -1079,9 +1074,8 @@
         </div>
     </section>
 
-    <!-- Disease Guide Detail -->
     <section class="page-section" id="page-disease-guide-detail">
-        <div class="detail-header"><span class="icon-large">🦠</span><h1 data-lang-en="Crop Disease Guide" data-lang-mr="पीक रोग मार्गदर्शक">Crop Disease Guide</h1><p data-lang-en="Module by Omkar Panchwagh" data-lang-mr="ओंकार पंचवाघ द्वारा मॉड्यूल">Module by Omkar Panchwagh</p></div>
+        <div class="detail-header"><span class="icon-large">🦠</span><h1 data-lang-en="Crop Disease Guide" data-lang-mr="पीक रोग मार्गदर्शक">Crop Disease Guide</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('fertilizer')">← Back</button>
             <div class="disease-card"><h4>🌾 Wheat Rust (गव्हाचा तांबेरा)</h4><p><strong>Symptoms:</strong> Orange-brown pustules on leaves & stems. <strong>Control:</strong> Spray Propiconazole fungicide. Use resistant varieties like HD-3086.</p></div>
@@ -1092,18 +1086,16 @@
         </div>
     </section>
 
-    <!-- Pesticide Schedule Detail -->
     <section class="page-section" id="page-pesticide-schedule-detail">
-        <div class="detail-header"><span class="icon-large">📅</span><h1 data-lang-en="Pesticide & Prevention Schedule" data-lang-mr="कीटकनाशक आणि प्रतिबंध वेळापत्रक">Pesticide & Prevention Schedule</h1><p data-lang-en="Module by Omkar Panchwagh" data-lang-mr="ओंकार पंचवाघ द्वारा मॉड्यूल">Module by Omkar Panchwagh</p></div>
+        <div class="detail-header"><span class="icon-large">📅</span><h1 data-lang-en="Pesticide & Prevention Schedule" data-lang-mr="कीटकनाशक आणि प्रतिबंध वेळापत्रक">Pesticide & Prevention Schedule</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('fertilizer')">← Back</button>
             <table class="info-table"><tr><th>Stage</th><th>Action</th><th>Product</th></tr><tr><td>Pre-sowing</td><td>Soil treatment</td><td>Trichoderma viride @ 4kg/acre</td></tr><tr><td>Seed treatment</td><td>Fungicide coating</td><td>Carbendazim @ 2g/kg seed</td></tr><tr><td>Seedling</td><td>Pest prevention</td><td>Neem oil spray (5ml/L water)</td></tr><tr><td>Vegetative</td><td>Weekly monitoring</td><td>Chlorantraniliprole if needed</td></tr><tr><td>Flowering</td><td>Bio-pesticides only</td><td>Beauveria bassiana</td></tr><tr><td>Pre-harvest</td><td>Stop all sprays</td><td>15 days before harvest</td></tr></table>
         </div>
     </section>
 
-    <!-- Government Schemes Detail -->
     <section class="page-section" id="page-govt-schemes-detail">
-        <div class="detail-header"><span class="icon-large">🏛️</span><h1 data-lang-en="Government Schemes for Farmers" data-lang-mr="शेतकऱ्यांसाठी सरकारी योजना">Government Schemes for Farmers</h1><p data-lang-en="Module by Nirjar Patil" data-lang-mr="निर्जर पाटील द्वारा मॉड्यूल">Module by Nirjar Patil</p></div>
+        <div class="detail-header"><span class="icon-large">🏛️</span><h1 data-lang-en="Government Schemes for Farmers" data-lang-mr="शेतकऱ्यांसाठी सरकारी योजना">Government Schemes for Farmers</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('market')">← Back</button>
             <div class="scheme-card"><h4>💰 PM-KISAN Yojana</h4><p>₹6,000 per year direct income support to farmer families. Paid in 3 installments of ₹2,000 each. All small & marginal farmers eligible.</p></div>
@@ -1113,9 +1105,8 @@
         </div>
     </section>
 
-    <!-- Loan & Subsidy Detail -->
     <section class="page-section" id="page-loan-subsidy-detail">
-        <div class="detail-header"><span class="icon-large">🏦</span><h1 data-lang-en="Loan & Subsidy Information" data-lang-mr="कर्ज आणि अनुदान माहिती">Loan & Subsidy Information</h1><p data-lang-en="Module by Nirjar Patil" data-lang-mr="निर्जर पाटील द्वारा मॉड्यूल">Module by Nirjar Patil</p></div>
+        <div class="detail-header"><span class="icon-large">🏦</span><h1 data-lang-en="Loan & Subsidy Information" data-lang-mr="कर्ज आणि अनुदान माहिती">Loan & Subsidy Information</h1></div>
         <div class="section-container">
             <button class="back-btn" onclick="navigateTo('market')">← Back</button>
             <div class="card-grid">
@@ -1176,7 +1167,6 @@
 
     <button class="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Go to top">↑</button>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
         let currentLang = 'en';
         let cropChartInstance = null;
